@@ -1,0 +1,331 @@
+{% extends "base1.html" %}
+{% load static %}
+
+
+{% block body %}
+
+
+ <div class="col-sm-9  px-5 py-2 ">
+     <div class="container-fluid py-4 skewbox" style="background-color:#ebebde;  border-radius:25px;">
+
+         <div class="row ">
+             <div class="col-sm-12 overflow-auto" style=" height:600px;overflow:hidden;">
+                 <h1 style="text-align:center; text-shadow:3px 3px 9px; text-decoration:underline;">Baba Cold Storage</h1>
+                 <h5 style="text-align:center; text-shadow:3px 3px 5px; text-decoration:underline;margin-top:15px; ">Mr. Ajay Choudhary</h5>
+
+                 <div class="hoverclass" style="width:180px; height:220px; border:3px solid;margin-top:20px; margin-left:33%; border-radius:250px;box-shadow:4px 10px 24px  5px #5a431b; padding:2px; align-item:center;">
+<img src="{% static 'images/ajaysir.jpg' %}" width="170px" height="210px" style="border-radius:250px;  ">
+                 </div>
+<h6 style="text-align:center; text-shadow:3px 3px 5px;margin-top:15px; ">Owner of the cold storage</h6>
+
+                 <br/>
+                 <hr/>
+
+
+                 <span style="font-weight:bold; text-shadow:3px 3px 9px;">About Baba Cold Storage :</span>
+
+                 <p>Baba Cold Stotage is a Cold Storage located at Barabanki in Fatehpur. This is very large cold storage which can store huge amount of Agro Products for a long duration. The Cold Storage give Storage to the Farmers and Merchant can Buy the agro products of Farmers.</p>
+
+
+                 <h5>Agro Products:&nbsp;  A farmer can Store and Merchant can Buy From the Cold Storage.</h5>
+
+
+ <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active d-flex justify-content-center" data-bs-interval="2000">
+
+                                        <div style="border:2px solid black; width:80%; height:50%; box-shadow:4px 10px 24px  5px #5a431b; padding:2px;"><img src="{% static 'images/ag1.jpeg' %}" width="450px" height="300px"></div>
+
+
+
+                                    </div>
+                                    <div class="carousel-item d-flex justify-content-center" data-bs-interval="2000">
+
+                                        <div style="border:2px solid black; width:80%; height:50%;box-shadow:4px 10px 24px  5px #5a431b; padding:2px;"><img src="{% static 'images/ag2.jpg' %}" width="480px" height="300px"></div>
+
+
+                                    </div>
+                                    <div class="carousel-item d-flex justify-content-center " data-bs-interval="2000">
+
+                                        <div style="border:2px solid black; width:80%; height:50%; box-shadow:4px 10px 24px  5px #5a431b; padding:2px;"><img src="{% static 'images/ag3.jpg' %}" width="480px" height="300px"></div>
+
+
+
+                                    </div>
+
+                                      <div class="carousel-item d-flex justify-content-center" data-bs-interval="2000">
+
+                                        <div style="border:2px solid black; width:80%; height:50%;box-shadow:4px 10px 24px  5px #5a431b; padding:2px;"><img src="{% static 'images/ag4.jpg' %}" width="480px" height="300px"></div>
+
+
+                                    </div>
+
+
+
+                                      <div class="carousel-item d-flex justify-content-center" data-bs-interval="2000">
+
+                                        <div style="border:2px solid black; width:80%; height:50%;box-shadow:4px 10px 24px  5px #5a431b; padding:2px;"><img src="{% static 'images/ag(1).jpg' %}" width="480px" height="300px"></div>
+
+
+                                    </div>
+
+
+
+                                </div>
+                                <button class="carousel-control-prev btn1 " type="button"
+                                    data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                                    <span class="carousel-control-prev" aria-hidden="true"></span>
+                                    <span
+                                        style="visibility:hidden; width:100px;border:2px solid #5a431b;; border-radius:5px; padding:5px; background-color:#5a431b;color:#ebebde;">Previous</span>
+                                </button>
+
+                                <button class="carousel-control-next btn2" type="button"
+                                    data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                                    <span class="carousel-control-next" aria-hidden="true"></span>
+                                    <span
+                                        style=" visibility:hidden; width:100px;border:2px solid #5a431b;; border-radius:5px; padding:5px; background-color:#5a431b;color:#ebebde;">Next</span>
+                                </button>
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         </div>
+
+
+
+
+
+         </div>
+
+
+
+
+
+  <div class="row  p-0 my-4 mx-2 ">
+             <div class="col-sm-12  p-2 " style="border:5px solid #5a431b;border-radius:15px; background-color:#ebebde;" >
+             <h4>List of cold storage Units :</h4>
+                 <h6 >Desired Storage Environment of Fruits and Vegetables in the cold storage</h6>
+
+             <details class="p-0"><summary style="background-color:#5a431b;color:#ebebde; ">view records</summary>
+
+                 <table border="1" cellspacing="3px" cellpadding="10px" align="center" class="my-3" >
+                     <tr>
+                         <th>
+Commodity</th>
+                         <th>Temperature (oC)</th>
+                         <th>Relative Humidity (%)</th>
+
+
+                     </tr>
+                     <tr>
+
+                          <td>Apple</td>
+                         <td>-1 - 3</td>
+                         <td>90 - 98</td>
+
+                     </tr>
+                     <tr>
+                            <td>Apricots</td>
+                         <td>-0.5 - 0</td>
+                         <td>90 - 95</td>
+
+
+                     </tr>
+                     <tr>
+
+                            <td>Avocado</td>
+                         <td>7 - 13</td>
+                         <td>85 - 90</td>
+
+                     </tr>
+                     <tr>
+
+                            <td>Asparagus</td>
+                         <td>0 - 2</td>
+                         <td>95 - 97</td>
+
+                     </tr>
+                     <tr>
+
+                            <td>Beans, green</td>
+                         <td>4 - 7</td>
+                         <td>90 - 95</td>
+
+                     </tr>
+                     <tr>
+
+                            <td>
+Beet root</td>
+                         <td>0 - 2</td>
+                         <td>95 - 97</td>
+
+                     </tr>
+                     <tr>
+
+                            <td>Broccoli</td>
+                         <td>0 - 2</td>
+                         <td>90 - 95</td>
+
+                     </tr>
+                     <tr>
+                            <td>Black berry</td>
+                         <td>-0.5 - 0</td>
+                         <td>95 - 97</td>
+
+
+                     </tr>
+                     <tr>
+                            <td>Cabbage</td>
+                         <td>0 - 2</td>
+                         <td>90 - 95</td>
+
+
+                     </tr>
+
+ <tr>
+                            <td>Carrots</td>
+                         <td>0 - 2</td>
+                         <td>90 - 95</td>
+
+
+                     </tr>
+
+                      <tr>
+                            <td>Cauliflower</td>
+                         <td>0 - 2</td>
+                         <td>90 - 95</td>
+
+
+                     </tr>
+
+                      <tr>
+                            <td>Cherries</td>
+                         <td>0.5 - 0</td>
+                         <td>90 - 95</td>
+
+
+                     </tr>
+
+                      <tr>
+                            <td>Cucumber</td>
+                         <td>7 - 10</td>
+                         <td>90 - 95</td>
+
+
+                     </tr>
+
+
+
+                      <tr>
+                            <td>Brinjal</td>
+                         <td>0 - 2</td>
+                         <td>90 - 95</td>
+
+
+                     </tr>
+ <tr>
+                            <td>Grapes</td>
+                         <td>-1 - 1</td>
+                         <td>85 - 90</td>
+
+
+                     </tr>
+ <tr>
+                            <td>Lemons</td>
+                         <td>4 - 15</td>
+                         <td>86 - 88</td>
+
+
+                     </tr>
+ <tr>
+                            <td>Lettuce</td>
+                         <td>0 - 1</td>
+                         <td>95 - 98</td>
+
+
+                     </tr>
+ <tr>
+                            <td>Lime</td>
+                         <td>3 - 10</td>
+                         <td>85 - 90</td>
+
+
+                     </tr>
+ <tr>
+                            <td>Mango</td>
+                         <td>11 - 18</td>
+                         <td>85 - 90</td>
+
+
+                     </tr>
+                     <tr>
+                         <td>Melon water</td>
+                         <td>2 - 4</td>
+                         <td>85 - 90</td>
+
+
+
+                     </tr>
+
+
+                      <tr>
+                         <td>Orange</td>
+                         <td>0 - 10</td>
+                         <td>85 - 90</td>
+
+
+
+                     </tr>
+
+                      <tr>
+                         <td>Peach</td>
+                         <td>-1 - 1</td>
+                         <td>88 - 92</td>
+
+
+
+                     </tr>
+
+
+                            <tr>
+                         <td>Potato</td>
+                         <td>1.5 - 4</td>
+                         <td>90 - 94</td>
+
+
+
+                     </tr>
+                        </table>
+
+
+
+             </details>
+
+
+         </div>
+         </div>
+
+
+
+     </div>
+      </div>
+
+
+
+
+
+{% endblock body %}

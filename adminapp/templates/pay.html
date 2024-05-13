@@ -1,0 +1,44 @@
+{% extends "adminbase.html" %}
+
+
+{% block body %}
+
+<h4 style="color:#5a413b; text-align:center; font-weight:bold; margin-top:10px;font-size:35px; text-shadow:3px 3px 5px;">Pay Rest Amount</h4>
+<div class="row mt-2">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <form action="{% url 'adminapp:paid' %}" method="post">
+            {% csrf_token %}
+
+            <div class="fomr-group">
+                <label>Aadhar No.</label>
+                <input type="number" name="aadharno" value="{{obj.aadharno}}" readonly="true" class="form-control"/>
+
+
+            </div>
+
+ <div class="form-group">
+                <label>Rest Amount</label>
+                <input type="number" name="restamt" value="{{obj.restamt}}" readonly="true" class="form-control">
+
+
+            </div>
+
+ <div class="form-group">
+                <label>Amount to Pay</label>
+                <input type="number" name="payamt"  required="true" class="form-control"/>
+
+
+            </div>
+            <br/>
+                       <input type="submit" class="btn  " value="pay" style="margin-bottom:15px;margin-left:20%;width:200px; background-color:#5a431b ;color:#ebebde; font-weight:bolder;" />
+
+
+        </form>
+
+
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+
+{% endblock body %}

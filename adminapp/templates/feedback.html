@@ -1,0 +1,48 @@
+{% extends "adminbase.html" %}
+{% block body %}
+
+<h4 style="color:#5a413b; text-align:center; font-weight:bold; margin-top:10px;font-size:35px; text-shadow:3px 3px 5px;">Feedback Management</h4>
+
+<div style="width:100%;margin:0 auto;">
+
+<table border="1" align="center" cellspacing="5px" cellpadding="10px" style="font-size:10px;">
+
+    <tr>
+
+        <th>Name</th>
+
+        <th>Contact No.</th>
+        <th>Email Address</th>
+        <th>Feedback Text</th>
+        <th>Feedback Date</th>
+        <!--<th>Delete</th>-->
+
+
+    </tr>
+
+    {% for fe in feed %}
+
+    <tr>
+
+        <td>{{fe.name}}</td>
+        <td>{{fe.contactno}}</td>
+        <td>{{fe.emailaddress}}</td>
+        <td>{{fe.feedbacktext}}</td>
+        <td>{{fe.feedbackdate}}</td>
+
+
+
+
+
+    </tr>
+
+    {% endfor %}
+
+
+
+</table>
+
+</div>
+
+
+{% endblock body %}

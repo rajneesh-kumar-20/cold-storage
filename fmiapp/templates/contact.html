@@ -1,0 +1,100 @@
+{% extends "base1.html" %}
+
+
+{% block body %}
+
+<div class="col-sm-9 px-5 py-2">
+     <div class="container-fluid py-5 skewbox" style="background-color:#ebebde;  border-radius:25px;">
+
+         <div class="row ">
+             <div class="col-sm-12 ">
+                 <h4 class="text-center" style="text-decoration:underline; font-weight:bolder; color:#5a431b;text-shadow:3px 3px 6px; font-size:30px;">Fill This Form For Enquiry</h4>
+                 {% if msg %}
+
+                 <p class="displaymsg "  style="text-align:center; ">{{msg}}</p>
+
+                 {% endif %}
+
+                   <div class="row py-3">
+                <div class="col-sm-2"></div>
+
+
+
+
+                 <div class="col-sm-8 border p-3 mt-3 hoverclass" style="border-radius:15px; background-color:#ebebde; border:5px solid #4c4842; box-shadow:4px 10px 24px  5px #5a431b;">
+                     <br/>
+<form action="{% url 'saveenq' %}" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label>Enter Your Name</label>
+        <input type="text" name="name" class="form-control" required="true" style="background-color:#a3977c;"/>
+
+    </div>
+<br/>
+ <div class="form-group">
+        <label>Gender : </label>
+        <input type="radio" name="gender" value="male" />Male
+        <input type="radio" name="gender" value="female"/>Female
+
+
+
+    </div>
+
+<br/>
+ <div class="form-group">
+        <label>Enter Address</label>
+     <textarea  name="address" class="form-control" style="background-color:#a3977c;"></textarea>
+
+
+
+    </div>
+<br/>
+<div class="form-group">
+        <label>Enter Contact No.</label>
+     <input type="text" name="contactno" class="form-control" required="true" style="background-color:#a3977c;"/>
+
+
+
+    </div>
+
+
+    <br/>
+<div class="form-group">
+        <label>Enter Email Address</label>
+     <input type="email" name="emailaddress" class="form-control" required="true" style="background-color:#a3977c;"/>
+
+
+
+    </div>
+
+    <br/>
+
+
+<div class="form-group">
+
+        <label>Enter Enquiry Text</label>
+     <textarea  name="enquirytext" class="form-control" required="true" style="background-color:#a3977c;"></textarea>
+
+</div>
+
+<br/>
+
+  <input type="submit" class="btn  " value="submit" style="width:200px; background-color:#5a431b ;color:#ebebde; font-weight:bolder;" />
+
+
+
+
+
+
+</form>
+
+                       <div class="col-sm-2"></div>
+                 </div>
+
+
+                 </div>
+             </div>
+         </div>
+     </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,207 @@
+.dform input{
+height:15px;
+border:none;
+resize:none;
+outline:none;
+font-size:10px;
+margin-top:20px;
+
+}
+.dform textarea{
+height:5px;
+border:none;
+resize:none;
+outline:none;
+font-size:10px;
+margin-top:20px;
+}
+
+.dform hr{
+margin-bottom:20px;
+}
+
+
+.ico{
+
+height: 30px;
+width:30px;
+border:1px solid;
+border-radius:50%;
+float: right;
+margin-top:7px;
+margin-right:15px;
+align-items:center;
+}
+
+
+.ico:hover{
+background-color:white;
+color:#e35d6a;
+border:2px solid black;
+
+}
+
+
+a:hover{
+transform:translate(3px,3px);
+
+}
+
+summary{
+background-color:#ff9900;
+color:black;
+}
+
+
+.detail{
+background:linear-gradient(#909090,white);
+color:black;
+padding:3px;
+}
+
+
+.contabout h4{
+text-align:center;
+
+
+
+
+}
+
+.contabout h6{
+color:white;
+font-size:15px;
+text-align:left;
+
+
+
+
+}
+
+.contabout{
+background-image:url('slider_2.jpg');
+background-size:cover;
+background-repeat:no-repeat;
+}
+
+
+.ico{
+height: 30px;
+width:30px;
+border:1px solid;
+border-radius:50%;
+float: right;
+margin-top:7px;
+margin-right:15px;
+align-items:center;
+}
+
+.ico:hover{
+background-color:white;
+color:#e35d6a;
+border:2px solid black;
+
+}
+
+
+a:hover{
+transform:translate(3px,3px);
+
+}
+
+
+/*index.html css*/
+
+.service{
+min-height:400px;
+
+background-color:yellow;
+float:left;
+
+padding:15px;
+background-color:black;
+opacity:.8;
+color:red;
+border:5px solid #e6b800;
+border-radius:15px;
+font-size:20px;
+}
+
+
+
+.service h4{
+
+color:#e6b800;
+margin-left:20px;
+font-size:40px;
+}
+.service h6{
+font-size:30px;
+color:#e6b800;
+margin-left:20px;
+}
+.btn1{
+margin-top:440px;
+
+}
+.btn2{
+margin-top:440px;
+
+
+}
+
+
+.skewbox{
+position:relative;
+padding:1rem 2rem;
+}
+
+
+.skewbox::before{
+content:"";
+position:absolute;
+top:-5px;
+left:-5px;
+bottom:-5px;
+bottom:70%;
+right:80%;
+background-color:orange;
+z-index:-1;
+transition: top .3s linear, bottom .3s linear,right .3s linear .3s;
+
+}
+
+.skewbox::after{
+content:"";
+position:absolute;
+bottom:-5px;
+right:-5px;
+top:70%;
+left:80%;
+
+background-color:orange;
+z-index:-1;
+
+transition: top .3s linear, bottom .3s linear,left .3s linear .3s;
+
+}
+
+
+.skewbox:hover::before{
+top:50%;
+left:-5px;
+bottom:-5px;
+right:-5px;
+
+}
+
+
+
+.skewbox:hover::after{
+bottom:50%;
+right:-5px;
+top:-5px;
+left:-5px;
+
+
+}

@@ -1,0 +1,64 @@
+.ico{
+height: 30px;
+width:30px;
+border:1px solid;
+border-radius:50%;
+float: right;
+margin-top:7px;
+margin-right:15px;
+align-items:center;
+}
+
+.ico:hover{
+background-color:white;
+color:#e35d6a;
+border:2px solid black;
+
+}
+
+
+a:hover{
+transform:translate(3px,3px);
+
+}
+
+
+/*index.html css*/
+
+.service{
+min-height:400px;
+
+background-color:yellow;
+float:left;
+
+padding:15px;
+background-color:black;
+opacity:.8;
+color:red;
+border:5px solid #e6b800;
+border-radius:15px;
+font-size:20px;
+}
+
+
+
+.service h4{
+
+color:#e6b800;
+margin-left:20px;
+font-size:40px;
+}
+.service h6{
+font-size:30px;
+color:#e6b800;
+margin-left:20px;
+}
+.btn1{
+margin-top:440px;
+margin-left:150px;
+}
+.btn2{
+margin-top:440px;
+margin-right:150px;
+
+}

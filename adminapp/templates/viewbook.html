@@ -1,0 +1,70 @@
+{% extends "adminbase.html" %}
+{% block body %}
+
+<h4 style="color:#5a413b; text-align:center; font-weight:bold; margin-top:10px;font-size:25px; text-shadow:3px 3px 5px;">Booking Details<hr/></h4>
+
+<div class="row">
+    <div class="col-sm-12 pb-5">
+        {% if res %}
+        <table border="1" style="width:80%;margin:0 auto;">
+            <tr>
+                <td>Name</td>
+                <td>{{res.name}}</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>{{res.address}}</td>
+            </tr>
+
+            <tr>
+                <td>Contact No</td>
+                <td>{{res.contactno}}</td>
+            </tr>
+
+            <tr>
+                <td>Aadhar No</td>
+                <td>{{res.aadharno}}</td>
+            </tr>
+
+            <tr>
+                <td>No. Of Packets</td>
+                <td>{{res.noofpacket}}</td>
+            </tr>
+
+            <tr>
+                <td>Duration in Months</td>
+                <td>{{res.duration}}</td>
+            </tr>
+
+            <tr>
+                <td>Rate per month per packet</td>
+                <td>{{res.rate}}</td>
+            </tr>
+
+            <tr>
+                <td>Total Amount</td>
+                <td>{{res.totalamt}}</td>
+            </tr>
+
+            <tr>
+                <td>Advance Amount</td>
+                <td>{{res.advance}}</td>
+            </tr>
+
+            <tr>
+                <td>Rest Amount</td>
+                <td>{{res.restamt}}</td>
+            </tr>
+
+            <tr>
+                <td>Booking Date</td>
+                <td>{{res.bookingdate}}</td>
+            </tr>
+
+        </table>
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock body %}

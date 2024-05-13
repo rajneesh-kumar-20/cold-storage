@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Farmer Merchant Integration</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
+    <!--<link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css"/>-->
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <!-- reference your installed Font Awesome Free package's files here -->
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+
+    <!-- reference your installed Font Awesome Free package's files here -->
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+
+<!--<script>-->
+
+
+<!--{% if msg %}-->
+
+<!--window.alert("{{msg}}");-->
+
+
+<!--{% endif %}-->
+
+
+<!--</script>-->
+
+
+
+
+
+
+        <style>
+
+.dform input{
+height:15px;
+border:none;
+resize:none;
+outline:none;
+font-size:10px;
+margin-top:20px;
+background-color:#ebebde;
+}
+
+
+
+
+.dform textarea{
+height:5px;
+border:none;
+background-color:#ebebde;
+resize:none;
+outline:none;
+font-size:10px;
+margin-top:20px;
+}
+
+.dform hr{
+margin-bottom:20px;
+}
+
+
+
+hr{
+height:3px;
+background-color:#5a431b;
+border: none;
+}
+
+.ico{
+height: 30px;
+width:30px;
+border:1px solid;
+border-radius:50%;
+float: right;
+margin-top:7px;
+margin-right:15px;
+align-items:center;
+}
+
+
+.ico:hover{
+background-color:white;
+color:#e35d6a;
+border:2px solid black;
+
+}
+
+
+a:hover{
+transform:translate(3px,3px);
+
+}
+
+summary{
+background-color:#ff9900;
+color:black;
+}
+
+
+.detail{
+background:linear-gradient(#909090,white);
+color:black;
+padding:3px;
+}
+
+
+.contabout h4{
+text-align:center;
+}
+
+.contabout h6{
+color:white;
+font-size:15px;
+text-align:left;
+}
+
+.contabout{
+background-image:url('slider_2.jpg');
+background-size:cover;
+background-repeat:no-repeat;
+}
+
+
+.ico{
+height: 30px;
+width:30px;
+border:1px solid;
+border-radius:50%;
+float: right;
+margin-top:7px;
+margin-right:15px;
+align-items:center;
+}
+
+.ico:hover{
+background-color:white;
+color:#e35d6a;
+border:2px solid black;
+}
+
+
+a:hover{
+transform:translate(3px,3px);
+}
+
+
+/*index.html css*/
+
+.service{
+min-height:400px;
+background-color:yellow;
+float:left;
+padding:15px;
+background-color:black;
+opacity:.8;
+color:red;
+border:5px solid #e6b800;
+border-radius:15px;
+font-size:20px;
+}
+
+
+
+.service h4{
+color:#e6b800;
+margin-left:20px;
+font-size:40px;
+}
+
+
+.service h6{
+font-size:30px;
+color:#e6b800;
+margin-left:20px;
+}
+
+
+.btn1{
+margin-top:440px;
+}
+
+
+.btn2{
+margin-top:440px;
+}
+
+
+.skewbox{
+position:relative;
+padding:1rem 2rem;
+}
+
+
+.skewbox::before{
+content:"";
+position:absolute;
+top:-5px;
+left:-5px;
+bottom:-5px;
+bottom:70%;
+right:80%;
+background-color:#5a431b;
+z-index:-1;
+transition: top .3s linear, bottom .3s linear,right .3s linear .3s;
+
+}
+
+.skewbox::after{
+content:"";
+position:absolute;
+bottom:-5px;
+right:-5px;
+top:70%;
+left:80%;
+
+background-color:#5a431b;
+z-index:-1;
+
+transition: top .3s linear, bottom .3s linear,left .3s linear .3s;
+
+}
+
+
+.skewbox:hover::before{
+top:50%;
+left:-5px;
+bottom:-5px;
+right:-5px;
+
+}
+
+
+
+.skewbox:hover::after{
+bottom:50%;
+right:-5px;
+top:-5px;
+left:-5px;
+}
+
+
+.hoverclass:hover{
+transform:scale(0.9858,0.9856);
+}
+
+
+.feedback{
+min-width:20%;
+height:50px;
+background-color:#777764;
+color:#ebebde;
+transform:rotate(-90deg);
+position:fixed;
+top:43.5%;
+left:86%;
+font-weight:bolder;
+font-size:22px;
+}
+
+.required:after{
+content:"*";
+color:red;
+}
+
+label{
+font-weight:bolder;
+color:#5a431b;
+}
+
+
+
+.displaymsg{
+border:2px solid black;
+margin-top:5%;
+width:50%;
+margin-left:25%;
+border-radius:50px;
+animation-name:msgani;
+animation-duration:3s;
+animation-iteration-count:1;
+box-shadow:7px 7px 14px ;
+
+}
+@keyframes msgani{
+0%{transform:scale(1,1);}
+70%{transform:scale(1.3111,1.1311);}
+
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+<div class="container-fluid">
+
+
+  <!-- Status bar start -->
+
+
+      <div class="row " style="background-color:#241f1c; color:white;" >
+
+
+        <div class="col-sm-4 p-2 rt"  style="color:#e7dac7;"><i class="fa-solid fa-phone mt-2 me-1" ></i>Phone No. 9368631713</div>
+        <div class="col-sm-4 p-2 " style="color:#e7dac7;"><i class="fa-solid fa-envelope mt-2 me-1"></i>Email-: rajneesgangwar77@gmail.com</div>
+
+          <div class="col-sm-4 " style="color:#e7dac7;">
+<div id="google_element" style="margin-left:20%; background-color:white;  padding-left:5%; border-radius:15px 0px 0px 15px;"></div>
+        </div>
+
+      </div>
+
+      <!-- statusbar end -->
+
+    <!--Navbar start-->
+
+    <div class="row ">
+
+        <div class="col-sm-12 p-0 fs-5 text fw-bolder">
+          <nav class="navbar navbar-expand-md" style="background-color:#ebecde; ">
+            <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="{% static 'images/fmi3.png' %}" width="60px" height="30px"/></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                  <a class="nav-link active " aria-current="page" href="{% url 'index' %}" style="color:#5a431b;">Home</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link " href="{% url 'about' %}" style="color:#5a431b;">About Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#5a431b;">
+                      Registration
+                  </a>
+                    <ul class="dropdown-menu">
+
+                  <li><a class="dropdown-item " href="{% url 'farmerreg' %}" style="color:#5a431b;">Farmer Registration</a></li>
+                  <li><a class="dropdown-item" href="{% url 'merchantreg' %}" style="color:#5a431b;">Merchant Registration</a></li>
+                      <!--<li><hr class="dropdown-divider"></li>-->
+                      <!--<li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                    </ul>
+                  </li>
+                  <li class="nav-item ">
+                  <a class="nav-link " style="color:#5a431b;" data-bs-toggle="modal" data-bs-target="#mymodal" >Login
+                       <!--<a class="nav-link " href="{% url 'login' %}" style="color:#5a431b;">login</a>-->
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="{% url 'contact' %}" style="color:#5a431b;">Contact Us</a>
+                  </li>
+                     <li class="nav-item">
+                  <a class="nav-link " href="{% url 'feedback' %}" style="color:#5a431b;">Feedback</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit"><span style="color:#5a431b; font-weight:bolder;">Search</span></button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+          </div>
+
+        </div>
+
+
+    <!--Navbar End-->
+
+<!--Slider start-->
+<div class="row">
+  <div class="col-sm-12 p-0">
+
+<div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+        <img src="{% static 'images/s6.jpg' %}" class="d-block w-100" alt="..." height="400px">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="text-light">Building of Cold Storage</h5>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+        <img src="{% static 'images/coldstorage.jpg' %}" class="d-block w-100" alt="..." height="400px">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="text-light">Food Product's Storage</h5>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+  <img src="{% static 'images/s5.jpg' %}" class="d-block w-100" alt="..." height="400px">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="text-light">Tmperature Testing</h5>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+  </div>
+</div>
+<!--Slider end-->
+
+  <!--content section start-->
+
+            <div class="row mt-3" style="min-height:650px" >
+
+              <!--Notice section start-->
+
+                <div class="col-sm-3 border p-3 " style="background-color:#241f1c;">
+                    <div class=" text-light text-center">
+                        <h4 style="color:#e7dac7;">Notifications</h4>
+                        <div class="list-group  ">
+                            {% for n in ns %}
+  <p class="list-group-item list-group-item-action text-light" aria-current="true" style="background-color:black; color:#ff9900;">
+      <marquee direction="" onmouseover="stop()" onmouseout="start()">{{n.newstext}}</marquee><img src="{% static 'images/newicon.gif' %}">
+  </p><hr style="background-color:white; height:10px;"/>
+
+
+                            {% endfor %}
+
+</div>
+                    </div>
+                </div>
+
+
+              <!--Notice section End-->
+
+
+
+    {% block body %}
+
+
+
+                {% endblock body %}
+
+
+
+
+            </div>
+
+                <!--content close-->
+     <!--content close-->
+
+    <!--Location-->
+    <div class="row my-3" style="background-color:#ebebde;color:#5a431b;">
+
+        <div class="col-sm-12 text-center"><h4 style="text-decoration:underline;text-align:center;color:#5a431b; font-weight:bolder; font-size:35px;">Location Of Cold Storage</h4><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14197.761637825985!2d81.20347011496585!3d27.17389156764229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399969789c9f9061%3A0xdeb313c93bb3b223!2z4KSr4KSk4KWH4KS54KSq4KWB4KSwLCDgpIngpKTgpY3gpKTgpLAg4KSq4KWN4KSw4KSm4KWH4KS2IDIyNTMwNQ!5e0!3m2!1shi!2sin!4v1662229249848!5m2!1shi!2sin" width="1000" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="p-3"></iframe></div>
+
+
+    </div>
+
+
+
+
+    <!--location end-->
+
+  <!--footer start-->
+     <div class="row  mt-3 " style="background-color:#5a431b;" >
+         <div class="col-sm-4 border text-left py-3"> <h4><a href="{% url 'about' %}" style="text-decoration:none; color:#e7dac7;">About Us</a></h4>
+    <p class="m-1" style="font-size:10px; color:#e7dac7;">  Company started its cold room and commercial refrigeration services at Barabanki in 2003.<br/> Company offers its customers a competitive solution for commercial refrigeration.<br/> Company provides the most efficient modular cold room storage.</p>
+      <button type="button" class="btn btn-light text-danger"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  <a href="{% url 'about' %}" style="text-decoration:none;color:red;">  Read More</a>
+</button></div>
+         <div class="col-sm-4 border text-center pt-4"> <img src="{% static 'images/fmi3.png' %}" height="150px" width="200px" class="p-2"></div>
+         <div class="col-sm-4 border"> <h2 class="mt-2"><a href="{% url 'contact' %}" style="text-decoration:none;color:#e7dac7;">Get in touch</a></h2>
+             <h6><i class="fa-solid fa-phone mt-2 me-1" style="text-decoration:none;color:#e7dac7;"></i><span style="text-decoration:none;color:#e7dac7;">Phone No. 9368631713</span></h6>
+             <h6><i class="fa-solid fa-envelope mt-2 me-1" style="text-decoration:none;color:#e7dac7;"></i><span style="text-decoration:none;color:#e7dac7;">Email-: rajneesgangwar77@gmail.com</span></h6>
+      <h6></h6>
+          <div class="ico d-flex align-items-center mb-2" style="border-color:#e7dac7;"><i class="fa-brands fa-square-facebook px-2" style="color:#e7dac7;"></i></div>
+          <div class="ico d-flex align-items-center mb-2" style="border-color:#e7dac7;"><i class="fa-brands fa-square-twitter px-2" style="color:#e7dac7;"></i></div>
+          <div class="ico d-flex align-items-center mb-2" style="border-color:#e7dac7;"><i class="fa-brands fa-square-instagram px-2" style="color:#e7dac7;"></i></div>
+
+
+</div>
+
+  </div>
+
+
+
+  <div class="row " style="background-color:#241f1c;">
+    <div  class="col-sm-12 text-center text-light p-2">
+        <span style="color:#e6b800"> &copy;copyright</span><span style="color:#e7dac7;"> 2022-23 all right reserved,designed and developed by </span><span style="color:#e6b800">Engineer Rajneesh Kumar</span>
+    </div>
+
+
+  </div>
+
+
+<!--footer end-->
+
+<!--modal start-->
+
+    <div class="modal" id="mymodal">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header " style="--bs-bg-opacity: .9; background-color:#5a431b; color:#ebecde;">
+
+                <h5 class=" modal-title" >
+                   Admin-Login
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+
+
+
+            </div>
+
+
+            <div class="modal-body text-dark " style="background-color:#ebecde;">
+
+
+                <div class="container-fluid">
+                    <div class=" row">
+                        <div class="col-sm-12">
+
+
+                            <div style="width:60%; margin:0 auto;">
+
+                                <div class="row py-2">
+
+                                    <div class="col-sm-12">
+                                        <form action="{% url 'validate' %}" method="post">
+
+                                            {% csrf_token %}
+
+                                            <div class="form-group">
+                                                <label class="required" style="font-weight:bolder; font-size:18px; color:#5a431b;">Enter UserID</label>
+                                                <input type="text" name="userid" class="form-control"
+                                                    placeholder="Enter User ID" required="true" />
+
+
+                                            </div>
+
+
+                                            <br />
+                                            <div class="form-group">
+                                                <label class="form-label required"  style="font-weight:bolder; font-size:18px; color:#5a431b;">Enter Password</label>
+                                                <input type="password" name="password" class="form-control" required="true" placeholder="Enter Password"/>
+
+
+                                            </div>
+                                            <br />
+                                            <div class="form-group">
+                                                <br />
+                                                <input type="submit" value="Login" class="btn  ms-5"
+                                                     style="background-color:#5a431b; color:#ebecde; font-weight:bold; " />
+                                                <input type="reset" value="reset" class="btn  ms-4"
+                                                    style="background-color:#5a431b; color:#ebecde; font-weight:bold;" />
+
+
+                                            </div>
+
+                                        </form>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<!--modal end-->
+
+
+
+</div>
+
+
+<!--Google translate-->
+
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+
+function loadGoogleTranslate(){
+new google.translate.TranslateElement("google_element")
+
+
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>

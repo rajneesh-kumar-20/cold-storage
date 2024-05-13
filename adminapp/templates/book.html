@@ -1,0 +1,62 @@
+{% extends "adminbase.html" %}
+{% block body %}
+
+<h4 style="color:#5a413b; text-align:center; font-weight:bold; margin-top:10px;font-size:25px; text-shadow:3px 3px 5px;">Booking Of Farmers<hr/></h4>
+
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <form action="{% url 'adminapp:pbook' %}" method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" value="{{fi.name}}" class="form-control" readonly=true"/>
+            </div>
+
+            <div class="form-group">
+                <label>Address</label>
+                <textarea name="address" class="form-control" readonly="true">{{fi.address}}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Contact No</label>
+                <input type="number"  class="form-control" name="contactno" value="{{fi.contactno}}" readonly="true"/>
+            </div>
+
+            <div class="form-group">
+                <label>Aadhar No</label>
+                <input type="number" name="aadharno" class="form-control" readonly="true" value="{{fi.aadharno}}"/>
+            </div>
+
+            <div class="form-group">
+                <label>Number. of packets</label>
+                <input type="number" name="noofpacket" class="form-control" required="true"/>
+            </div>
+
+            <div class="form-group">
+                <label>Duration in months</label>
+                <input type="number" name="duration" class="form-control" required="true"/>
+            </div>
+
+            <div class="form-group">
+                <label>Rate per packet per month</label>
+                <input type="number" name="rate" class="form-control" required="true"/>
+            </div>
+
+            <div class="form-group">
+                <label>Advance Booking Amount</label>
+                <input type="number" name="advance" class="form-control" required="true"/>
+            </div>
+
+            <div class="form-group">
+                <br/>
+                 <input type="submit" class="btn  " value="Book" style="margin-bottom:15px;margin-left:20%;width:200px; background-color:#5a431b ;color:#ebebde; font-weight:bolder;" />
+            </div>
+
+        </form>
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,114 @@
+{% extends "base1.html" %}
+
+
+{% block body %}
+
+ <div class="col-sm-9  px-5 py-2 ">
+     <div class="container-fluid py-4 skewbox" style="background-color:#ebebde;  border-radius:25px;">
+
+         <div class="row ">
+             <div class="col-sm-12 ">
+         <h4 class="text-center"  style="text-decoration:underline; font-weight:bolder; color:#5a431b;text-shadow:3px 3px 6px; font-size:30px;">Farmer Registration Form</h4>
+         </div>
+         </div>
+
+         <!--Registration Form Start-->
+
+         {% if msg %}
+         <p class="displaymsg " style="text-align:center">{{msg}}</p>
+         {% endif %}
+
+         <form action="{% url 'freg' %}" method="post" >
+             {% csrf_token %}
+
+         <div class="row py-3">
+             <div class="col-sm-2"></div>
+
+
+
+                      <div class="col-sm-8 border p-3 hoverclass" style="border-radius:15px; background-color:#ebebde; border:5px solid #4c4842; box-shadow:4px 10px 24px  5px #5a431b;">
+
+                          <div class="form-group dform" >
+
+                              <label class="required">Enter Your Name :</label>
+                              <input  type="text" name="name" class="form-control p-0" placeholder="Enter Your Name" required="true" />
+
+                      </div>
+<hr/>
+
+
+                            <div class="form-group dform">
+
+                              <label class="required">Select Your Gender :</label>
+                              <input class="m-0 ms-5" type="radio" name="gender" value="Male"   required="true"/>Male
+                              <input type="radio" name="gender" value="Female"   required="true"/>Female
+
+                      </div>
+                          <hr/>
+
+
+                          <div class="form-group dform">
+                              <label class="required">Address :</label>
+                              <textarea name="address" class="form-control p-0" placeholder="Enter your Address"></textarea>
+
+                          </div>
+ <hr/>
+
+                          <div class="form-group dform">
+                              <label class="required">Enter Contact NO. :</label>
+                              <input type="text" class="form-control p-0" name="contactno" required="true" placeholder="Enter Your Number"/>
+
+
+
+                          </div>
+ <hr/>
+                               <div class="form-group dform">
+                              <label class="required">Enter Aadhar NO. :</label>
+                              <input type="number" class="form-control p-0" name="aadharno" required="true" placeholder="Enter Your Aadhar Number"/>
+
+
+
+                          </div>
+
+ <hr/>
+                            <div class="form-group">
+
+
+                              <input type="submit" class="btn  " value="register" style="width:200px; background-color:#5a431b ;color:#ebebde; font-weight:bolder;" />
+
+
+
+                          </div>
+
+
+
+
+
+
+
+
+
+                      </div>
+
+
+
+               <div class="col-sm-2 "></div>
+
+         </div>
+
+
+
+</form>
+
+
+         <!--Registration form End-->
+
+
+
+
+
+
+
+     </div>
+ </div>
+     {% endblock body %}

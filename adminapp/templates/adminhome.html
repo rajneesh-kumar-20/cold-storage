@@ -1,0 +1,59 @@
+{% extends "adminbase.html" %}
+
+{% block body %}
+ <h4 style="color:#5a413b; text-align:center; font-weight:bold; margin-top:10px;font-size:35px; text-shadow:3px 3px 5px;">Add News and Events</h4>
+
+<div class="row">
+ <div class="col-sm-3"></div>
+ <div class="col-sm-6 ">
+<form action="{% url 'adminapp:addnews' %}" method="post" style="border:1px solid; padding:50px; margin-top:20px; border-radius:50px; box-shadow:4px 10px 24px  5px #5a431b;">
+    {% csrf_token %}
+  <div class="form-group">
+   <label>Enter News Description:</label>
+   <textarea name="newstext" class="form-control"></textarea>
+  </div>
+<br/>
+
+
+<input type="submit" class="btn  " value="Add" style="margin-bottom:15px;margin-left:12%;width:150px; background-color:#5a431b ;color:#ebebde; font-weight:bolder;" />
+
+
+</form>
+
+
+ </div>
+
+ <div class="col-sm-3 "></div>
+
+
+
+</div>
+<div class="row mt-2">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 my-5 " >
+        <h5 style="text-align:center; text-decoration:underline;">Added News</h5>
+        <table border="1" style="margin:0 auto;">
+<tr>
+    <th>ID</th>
+    <th>News</th>
+    <th>Posted Date</th>
+    <th>Delete</th>
+</tr>
+
+            {%   for n in ns %}
+            <tr>
+                <td>{{n.id}}</td>
+                <td>{{n.newstext}}</td>
+                <td>{{n.newsdate}}</td>
+                <td><a href="{% url 'adminapp:deletenews' id=n.id %}">delete</a></td>
+
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+   <div class="col-sm-2">
+</div>
+
+</div>
+{% endblock body %}
